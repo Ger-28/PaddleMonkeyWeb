@@ -1,0 +1,69 @@
+#pistas {
+  color: #ff7a00;
+}
+
+.main {
+  text-align: center;
+  align-items: center;
+}
+
+.seccion {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.img {
+  width: 100%;
+  height: 200px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.titulo-dobles {
+  text-align: center;
+  border-bottom: 5px solid #ff7a00;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
+  margin-top: 150px;
+}
+
+.titulo-individuales{
+  text-align: center;
+  border-bottom: 5px solid #ff7a00;
+  border-bottom-left-radius: 10%;
+  border-bottom-right-radius: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.datos_pistas {
+  margin: 5%;
+  background-color: rgba(255, 122, 0, 0.3);
+  box-shadow: 0 15px 30px 1px grey;
+  border: 2px solid rgba(0, 0, 0, 0.4);
+
+  min-width: 300px;
+  max-width: 20%;
+  max-height: 80%;
+}
+
+.descripciones {
+  padding-right: 10%;
+  padding-left: 10%;
+}
+
+@media screen and (max-width: 790px) {
+  #pistas{
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .titulo-dobles, .titulo-individuales{
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}

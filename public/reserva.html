@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <title>PaddleMonkey</title>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta
+      name="keywords"
+      content="padel,deporte,pistas,material,instalaciones,reservas"
+    >
+    <meta name="description" content="150 words" >
+    <meta name="subject" content="Pagina principal de PaddleMonkey" >
+    <meta name="copyright" content="PaddleMonkey.SA" >
+    <meta
+      name="author"
+      content="Adrian García Bermejo, a.garber@alum.uca.es, Germán Jesús Tocón Ruiz, german.toconruiz@alum.uca.es, Juan Antonio González Cantero, juanantonio.gonzalezcantero@alum.uca.es"
+    >
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" >
+    <link rel="stylesheet" type="text/css" href="css/normalizacion.css" >
+    <link rel="stylesheet" type="text/css" href="css/reservas.css" >
+    <link
+      href="https://fonts.googleapis.com/css?family=Helvetica"
+      rel="stylesheet"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header>
+      <div class="cabecera">
+        <a href="index.html">
+          <img
+            class="logo"
+            src="imagenes/Logotipo.jpg"
+            alt="logo de PaddleMonkey"
+          >
+        </a>
+        <button id="menu-colapsado-btn" onclick="document.querySelector('#menu').classList.toggle('active');">
+          <span class="icono">&#x2630;</span>
+        </button>
+        <ul id="menu">
+          <li>
+            <a href="index.html" id="inicio">INICIO</a>
+          </li>
+          <li>
+            <a href="salas.html" id="pistas">PISTAS</a>
+          </li>
+          <li>
+            <a href="reserva.html" id="reservas">RESERVAS</a>
+          </li>
+          <li>
+            <a href="nosotros.html" id="sobre-nosotros">SOBRE NOSOTROS</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <h1 id="titulo-h1">Reserva</h1>
+      <div class="main-div">
+        
+        <!-- Formulario de reservas -->
+        <div class="reservas-div">
+          <h2 id="reserva-h2">Formulario de reserva</h2>
+          <form
+            class="formulario-grid"
+            onsubmit="return validacion_formulario();"
+          >
+            <div class="form-item">
+              <label for="form-selector" class="label-formulario"
+                >Seleccionar pista</label
+              ><br >
+              <select
+                class="form-input"
+                id="form-selector"
+                onchange="pistaSeleccionada(this)"
+              ></select>
+            </div>
+            <div class="form-item">
+              <label for="asistentes" class="label-formulario">
+                Número de asistentes</label
+              ><br >
+              <input
+                type="number"
+                id="asistentes"
+                class="form-input"
+                placeholder="4"
+              >
+            </div>
+            <div class="form-item">
+              <label for="nombre" class="label-formulario">Nombre</label><br >
+              <input
+                type="text"
+                id="nombre"
+                class="form-input"
+                placeholder="Abraham"
+              >
+            </div>
+            <div class="form-item">
+              <label for="apellidos" class="label-formulario">Apellidos</label>
+              <br >
+              <input
+                type="text"
+                id="apellidos"
+                class="form-input"
+                placeholder="Cantero Mateos"
+              >
+            </div>
+            <div class="form-item">
+              <label for="tlf" class="label-formulario">Teléfono</label><br >
+              <input
+                type="text"
+                id="tlf"
+                class="form-input"
+                placeholder="65912598X"
+              >
+            </div>
+            <div class="form-item">
+              <label for="dni" class="label-formulario">DNI</label><br >
+              <input
+                type="text"
+                id="dni"
+                class="form-input"
+                placeholder="10101010H"
+              >
+            </div>
+            <div class="form-item" id="form-email">
+              <label for="email" class="label-formulario">Email</label><br >
+              <input
+                type="text"
+                id="email"
+                class="form-input"
+                placeholder="PaddleMonkey@gmail.com"
+              >
+            </div>
+            <div class="form-item">
+              <label for="selector-fecha" class="label-formulario"
+                >Fecha reserva</label
+              ><br >
+              <input type="date" class="form-input" id="selector-fecha" >
+            </div>
+            <div class="form-item">
+              <label for="selector-horai" class="label-formulario"
+                >Hora inicio - fin</label
+              ><br >
+              <div id="selector-hora">
+                <input type="time" class="form-input" id="selector-horai" >
+                <input type="time" class="form-input" id="selector-horaf" >
+              </div>
+            </div>
+            <div class="form-item">
+              <label for="form-checkbox" class="label-formulario"
+                >¿Necesita material?
+                <input type="checkbox" id="form-checkbox" >
+              </label>
+            </div>
+            <div class="form-item">
+              <input type="submit" id="form-submit" value="Reservar" >
+            </div>
+          </form>
+          <p id="mensaje-error"></p>
+        </div>
+
+        <div class="reservas-div">
+          <div class="sala-div">
+            <img id="pista-img" src="imagenes/Babuino.jpg" alt="imagenes-pistas">
+            <h2 id="pista-nombre">pista-nombre</h2>
+            <div>
+              <p id="pista-precio"></p>
+              <p id="pista-capacidad"></p>
+              <p id="pista-cubierta"></p>
+              <p id="pista-pared"></p>
+            </div>
+            <p id="pista-descripcion"></p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="texto_footer">
+        <table class="tabla_footer">
+          <thead>
+            <tr>
+              <th>INFORMACIÓN DE CONTACTO</th>
+              <th>LOCALIZA NUESTRAS INSTALACIONES</th>
+              <th>VISITA NUESTRAS REDES SOCIALES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>
+                  <a href="tel:+34682598567" class="tlf">(+34) 682 59 85 67</a>
+                  <br >
+                  <a href="mailto:padelmkey@gmail.com" class="email">padelmkey@gmail.com</a>
+                </p>
+              </td>
+              <td>
+                <p>
+                  Polígono Industrial La Menacha
+                  <br >
+                  Algeciras, Cádiz
+                </p>
+              </td>
+              <td>
+                <div id="redes">
+                  <a href="https://www.facebook.com/"><img src="./imagenes/facebook-logo.png" alt="Logo facebook"></a>
+                  <a href="https://twitter.com/"><img src="./imagenes/twitter-logo.png" alt="Logo twitter"></a>
+                  <a href="https://www.instagram.com/"><img src="./imagenes/instagram-logo.png" alt="Logo instagram"></a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="derechos-autor">
+          <small>&copy; 2023 <b>PaddleMonkey</b></small>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/reservas.js"></script>
+    <script src="./js/validacion-formulario.js"></script>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <title>PaddleMonkey</title>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1" >
+    <meta
+      name="keywords"
+      content="padel,deporte,pistas,material,instalaciones,reservas"
+    >
+    <meta name="description" content="150 words" >
+    <meta name="subject" content="Pagina principal de PaddleMonkey" >
+    <meta name="copyright" content="PaddleMonkey.SA" >
+    <meta
+      name="author"
+      content="Adrian García Bermejo, a.garber@alum.uca.es, Germán Jesús Tocón Ruiz, german.toconruiz@alum.uca.es, Juan Antonio González Cantero, juanantonio.gonzalezcantero@alum.uca.es"
+    >
+    <link rel="stylesheet" type="text/css" href="css/estilos.css" >
+    <link rel="stylesheet" type="text/css" href="css/normalizacion.css" >
+    <link rel="stylesheet" type="text/css" href="css/index.css" >
+    <link
+      href="https://fonts.googleapis.com/css?family=Helvetica"
+      rel="stylesheet"
+    >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  </head>
+
+  <body>
+
+    <!-- Header -->
+    <header>
+      <div class="cabecera">
+        <a href="index.html">
+          <img
+            class="logo"
+            src="imagenes/Logotipo.jpg"
+            alt="logo de PaddleMonkey"
+          >
+        </a>
+        <button id="menu-colapsado-btn" onclick="document.querySelector('#menu').classList.toggle('active');">
+          <span class="icono">&#x2630;</span>
+        </button>
+        <ul id="menu">
+          <li>
+            <a href="index.html" id="inicio">INICIO</a>
+          </li>
+          <li>
+            <a href="salas.html" id="pistas">PISTAS</a>
+          </li>
+          <li>
+            <a href="reserva.html" id="reservas">RESERVAS</a>
+          </li>
+          <li>
+            <a href="nosotros.html" id="sobre-nosotros">SOBRE NOSOTROS</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Imagen inicial y boton de reserva ahora -->
+    <div class="container">
+      <img
+        src="./imagenes/Imagen_padel_inicial.jpg"
+        alt="Pala y pelotas de padel"
+      >
+      <div class="texto_indice">
+        <p class="texto_imagen">
+          ¿Eres un aficionado/a al pádel? Entonces, estás en el lugar adecuado.
+          En nuestra página web podrás reservar tu pista de pádel y disfrutar de
+          tu deporte favorito siempre que quieras.
+        </p>
+        <a class="boton_indice" href="reserva.html">HAZ TU RESERVA AHORA</a>
+      </div>
+    </div>
+
+    <!-- Precios -->
+    <div class="div-precios">
+      <h1>Precios</h1>
+      <p>
+        La siguiente tabla muestra los precios por persona de las reservas de
+        cada pista según el tipo de esta y el día en el que se realice. Tenga en
+        cuenta que cada reserva tendrá una hora y media de duración.
+      </p>
+      <div class="precios">
+        <table class="tabla_precios">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Lunes-Viernes</th>
+              <th>Findes y festivos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Individuales</b></td>
+              <td>3€</td>
+              <td>4€</td>
+            </tr>
+            <tr>
+              <td><b>Dobles - exteriores</b></td>
+              <td>2,5€</td>
+              <td>3,5€</td>
+            </tr>
+            <tr>
+              <td><b>Dobles - cubiertas</b></td>
+              <td>4€</td>
+              <td>5€</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Seccion de eventos principales y aside de noticias destacadas -->
+    <div class="eventos-noticias">
+      <section class="eventos-noticias-articulo">
+        <div class="eventos">
+          <h2>Eventos principales</h2>
+          <article class="articulo">
+            <img
+              src="imagenes/premios.jpg"
+              alt="Premios"
+              class="eventos-noticias-img"
+            >
+            <p class="descripcion-evento-noticias">
+                Torneo benéfico Julio 2023 con premios
+                y sorteo para los participantes.
+            </p>
+          </article>
+          <div class="separador-horizontal"></div>
+          <article class="articulo">
+            <img
+              src="imagenes/el_cigala.jpg"
+              alt="Premios"
+              class="eventos-noticias-img"
+            >
+            <p class="descripcion-evento-noticias">
+                Visita especial de “El Cigala” por nuestro 38 aniversario
+            </p>
+          </article>
+          <div class="separador-horizontal"></div>
+          <article class="articulo">
+            <img
+              src="imagenes/comida.jpg"
+              alt="Comida"
+              class="eventos-noticias-img"
+            >
+            <p class="descripcion-evento-noticias">
+                Bebida y comida a mitad de precio por nuestro 38 aniversario (sólo para los más avispados)
+            </p>
+          </article>
+        </div>
+      </section>
+      <div class="separador-vertical"></div>
+      <aside class="eventos-noticias-articulo">
+        <h2>Noticias destacadas</h2>
+        <article class="articulo">
+          <img
+            src="imagenes/noticia_padel_abudhabi.jpg"
+            alt="Pista padel Abu Dhabi"
+            class="eventos-noticias-img"
+          >
+          <p class="descripcion-evento-noticias">
+            Abu Dhabi, estreno del World Padel Tour 2023
+          </p>
+        </article>
+        <div class="separador-horizontal"></div>
+        <article class="articulo">
+          <img
+            src="imagenes/noticia_padeldrop.jpg"
+            alt="Hombre siendo entrevistado"
+            class="eventos-noticias-img"
+          >
+          <p class="descripcion-evento-noticias">
+            Padel Drop, las máquinas de pelotas y 'overgrips' de pádel que se expanden por los clubs de España
+          </p>
+        </article>
+        <div class="separador-horizontal"></div>
+        <article class="articulo">
+          <img
+            src="imagenes/noticia_equipamiento.jpg"
+            alt="Equipamiento padel"
+            class="eventos-noticias-img"
+          >
+          <p class="descripcion-evento-noticias">
+            Conoce todo lo necesario para organizar tu equipamiento y disfrutar del mejor pádel este 2023
+          </p>
+        </article>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="texto_footer">
+        <table class="tabla_footer">
+          <thead>
+            <tr>
+              <th>INFORMACIÓN DE CONTACTO</th>
+              <th>LOCALIZA NUESTRAS INSTALACIONES</th>
+              <th>VISITA NUESTRAS REDES SOCIALES</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>
+                  <a href="tel:+34682598567" class="tlf">(+34) 682 59 85 67</a>
+                  <br >
+                  <a href="mailto:padelmkey@gmail.com" class="email">padelmkey@gmail.com</a>
+                </p>
+              </td>
+              <td>
+                <p>
+                  Polígono Industrial La Menacha
+                  <br >
+                  Algeciras, Cádiz
+                </p>
+              </td>
+              <td>
+                <div id="redes">
+                  <a href="https://www.facebook.com/"><img src="./imagenes/facebook-logo.png" alt="Logo facebook"></a>
+                  <a href="https://twitter.com/"><img src="./imagenes/twitter-logo.png" alt="Logo twitter"></a>
+                  <a href="https://www.instagram.com/"><img src="./imagenes/instagram-logo.png" alt="Logo instagram"></a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="derechos-autor">
+          <small>&copy; 2023 <b>PaddleMonkey</b></small>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

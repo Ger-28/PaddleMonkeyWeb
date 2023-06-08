@@ -1,0 +1,154 @@
+
+#sobre-nosotros {
+    color: #ff7a00;
+}
+
+.texto-origenes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 120px;
+}
+
+.texto-origenes img {
+    width: 90%
+}
+
+.imagen-origen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5%;
+}
+
+.imagen-origen p {
+    font-size: 18px;
+    padding: 5%;
+}
+
+.localizacion {
+    margin: 5%;
+    text-align: center;
+}
+
+.localizacion iframe {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.texto_localizacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.tren-bus {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 3%;
+}
+
+.tren-bus a{
+    justify-content: center;
+}
+
+.texto_localizacion p {
+    margin-bottom: 5%;
+}
+
+.bus {
+    background-color: #FFD8B3;
+    border-radius: 10%;
+    padding: 10px;
+    width: 20%; /* ajustar según el tamaño deseado */
+    min-width: 250px;
+    max-height: 170px;
+    box-shadow: 2px 2px 2px 2px grey;
+    margin: 0 10%;
+    align-content: center;
+}
+
+
+
+.tren {
+    background-color: #FFD8B3;
+    border-radius: 10%;
+    padding: 10px;
+    width: 20%; /* ajustar según el tamaño deseado */
+    min-width: 250px;
+    max-height: 170px;
+    box-shadow: 2px 2px 2px 2px grey;
+    margin: 0 10%;
+    align-content: center;
+}
+
+.bus a{
+    color: black;
+    text-decoration-line: underline;
+    font-style: normal;
+}
+
+.tren a{
+    color: black;
+    text-decoration-line: underline;
+    font-style: normal;
+}
+
+.tren a:hover, .bus a:hover{
+    color: rgb(101, 101, 101);
+}
+
+.transporte a {
+    font-family: "Helvetica", sans-serif;
+    font-style: normal;
+    color: black;
+}
+
+.transporte p {
+    align-items: center;
+}
+
+.transporte h2 {
+    text-shadow: 2px 2px 2px #000;
+    color: #FFFEFE;
+}
+
+@media screen and (max-width: 1180px) {
+    
+    .imagen-origen {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    #sobre-nosotros{
+        color: #fff;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .texto-origenes img {
+        width: 100%
+    }
+    
+    .tren-bus {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tren {
+        margin-bottom: 3%;
+    }
+
+    .bus {
+        margin-top: 5%;
+    }
+}

@@ -1,0 +1,175 @@
+
+#reservas {
+  color: #ff7a00;
+}
+
+.main-div {
+  display: flex;
+  margin: 0 8% 1% 8%;
+  justify-content: space-around;
+}
+
+.reservas-div {
+  flex: 1;
+  margin: 0px 25px;
+  border: 2px solid;
+  border-color: #ff7a00;
+  text-align: center;
+  box-shadow: 0 15px 30px 1px grey;
+}
+
+.formulario-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 0px 15px 20px 15px;
+  column-gap: 20px;
+}
+
+#reserva-h2 {
+  margin-bottom: 25px;
+}
+
+.form-item {
+  margin: 15px;
+}
+
+.form-input {
+  width: 97%;
+  margin-top: 3px;
+}
+
+#titulo-h1 {
+  margin-left: 10%;
+  margin-top: 150px;
+}
+
+#form-selector {
+  width: 100%;
+  text-align: center;
+}
+
+#email {
+  width: 98.5%;
+}
+
+#selector-fecha {
+  width: 98%;
+  text-align: center;
+}
+
+#form-email {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+#selector-hora {
+  display: flex;
+  width: 100%;
+}
+
+#selector-horai {
+  margin-right: 1px;
+  text-align: center;
+}
+
+#selector-horaf {
+  margin-left: 1px;
+  text-align: center;
+}
+
+#mensaje-error {
+  font-weight: bold;
+  color: red;
+  margin: 15px;
+}
+
+.sala-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+.sala-div > ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+.sala-div > ul > h2 {
+  margin: 10px 0 20px 0;
+}
+
+#pista-img {
+  width: 370px;
+}
+
+#pista-descripcion {
+  margin: 0px;
+}
+
+@media screen and (max-width: 965px) {
+  .main-div {
+    flex-direction: column;
+    margin: 0 15px 0 15px;
+  }
+
+  .reservas-div {
+    margin-bottom: 50px;
+  }
+
+  .sala-div {
+    padding: 25px;
+  }
+  .sala-div > ul > h2 {
+    margin: 25px 0 0 0;
+  }
+  #pista-descripcion {
+    margin: 20px;
+  }
+
+  #pista-img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 790px) {
+  #reservas{
+    color: #fff;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-div {
+    margin: 0 0 0 0;
+  }
+
+  .formulario-grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #email {
+    width: 97.5%;
+  }
+
+  #selector-hora {
+    flex-direction: column;
+    margin-bottom: 1px;
+    width: 100%;
+  }
+
+  #selector-horai {
+    margin-right: 0px;
+  }
+
+  #selector-horaf {
+    margin-left: 0px;
+  }
+
+  .sala-div {
+    padding: 0px;
+  }
+
+  #pista-img {
+    width: 100%;
+  }
+}
